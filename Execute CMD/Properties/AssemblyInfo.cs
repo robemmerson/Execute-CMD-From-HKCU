@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Execute CMD")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Executes a silent CMD window with whatever commands are in the 'HKCU\Software\Microsoft\exe' key")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Rob Emmerson")]
 [assembly: AssemblyProduct("Execute CMD")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
